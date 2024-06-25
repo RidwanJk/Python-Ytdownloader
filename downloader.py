@@ -1,15 +1,12 @@
 from pytube import YouTube
 import moviepy.editor as mp
 import os
-
-def loading(stream, chunk, bytes_remaining):
-    total_size = stream.filesize
-    bytes_downloaded = total_size - bytes_remaining
-    percentage = bytes_downloaded / total_size * 100
-    print(f"Downloading... {percentage:.2f}% done")
+    
+def loading(stream, chunk, file_handle, bytes_remaining):    
+    return bytes_remaining
 
 def finished(stream, file_handle):
-    print("Download Complete")
+    print("Download completed.")
 
 def merge_audio_video(video_file, audio_file, output_file):
     video = mp.VideoFileClip(video_file)

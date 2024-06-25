@@ -70,7 +70,8 @@ class Ui_Form(object):
 
         self.progressBar = QProgressBar(Form)
         self.progressBar.setObjectName(u"progressBar")
-        self.progressBar.setValue(24)
+        self.progressBar.setValue(0)
+        self.progressBar.setMaximum(100)   
 
         self.verticalLayout.addWidget(self.progressBar)
 
