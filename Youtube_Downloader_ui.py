@@ -55,13 +55,13 @@ class Ui_Form(object):
 
         self.verticalLayout.addWidget(self.label)
 
-        self.frame = QFrame(Form)
-        self.frame.setObjectName(u"frame")
-        self.frame.setMinimumSize(QSize(0, 200))
-        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Shadow.Raised)
+        self.label_image = QLabel(Form)
+        self.label_image.setMinimumSize(QSize(0, 200))
+        self.label_image.setFrameShape(QFrame.Shape.StyledPanel)
+        self.label_image.setFrameShadow(QFrame.Shadow.Raised)
+        self.label_image.setAlignment(Qt.AlignCenter) 
 
-        self.verticalLayout.addWidget(self.frame)
+        self.verticalLayout.addWidget(self.label_image)
 
         self.label_4 = QLabel(Form)
         self.label_4.setObjectName(u"label_4")

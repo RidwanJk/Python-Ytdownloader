@@ -27,7 +27,14 @@ def get_available_resolutions(video_url):
     except Exception as e:
         print(f"An error occurred: {e}")
         return []
-
+def get_thumbnail_url(video_url):
+    try:
+        yt = YouTube(video_url)
+        return yt.thumbnail_url
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return ""
+    
 def download_video(video_url, stream):
     try:
         yt = YouTube(video_url, on_progress_callback=loading, on_complete_callback=finished)
