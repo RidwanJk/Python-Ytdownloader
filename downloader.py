@@ -2,7 +2,9 @@ from pytube import YouTube
 import moviepy.editor as mp
 import os
     
-def loading(stream, chunk, file_handle, bytes_remaining):    
+def loading(stream, file_handler, bytes_remaining):
+    total=stream.filesize
+    bytes_remaining = total - file_handler
     return bytes_remaining
 
 def finished(stream, file_handle):

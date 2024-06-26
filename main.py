@@ -64,8 +64,12 @@ class MyMainWindow(QMainWindow):
         self.worker.finished.connect(self.on_download_finished)
         self.worker.start()
         
+        # https://www.youtube.com/watch?v=7pOr3dBFAeY
     def update_progress(self, progress):
+        
         self.ui.progressBar.setValue(progress)
+
+
 
     def on_download_finished(self, success):
         if success:
@@ -75,11 +79,12 @@ class MyMainWindow(QMainWindow):
 
 class MergeWorker(QThread):
     finished = Signal(bool)    
-
+        
     def __init__(self, video_url, stream):
         super().__init__()
         self.video_url = video_url
         self.stream = stream
+        
 
     def run(self):
         # Perform the merging process here
