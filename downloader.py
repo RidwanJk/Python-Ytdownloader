@@ -117,30 +117,46 @@ def download_playlist(playlist_url, resolution, progress_callback=None):
         total = len(pl.video_urls)
         print(f"Playlist: {pl.title} | {total} videos")
 
-        for i, url in enumerate(pl.video_urls):
-            print(f"Downloading video {i+1}/{total}: {url}")
-            yt = YouTube(url)
-            stream = yt.streams.filter(
-                mime_type="video/mp4",
-                only_video=True,
-                resolution=resolution
-            ).first()
+        skipped = []
 
-            # Fallback to best available if resolution not found
-            if not stream:
+        for i, url in enumerate(pl.video_urls):
+            try:
+                print(f"Downloading video {i+1}/{total}: {url}")
+                yt = YouTube(url)
                 stream = yt.streams.filter(
                     mime_type="video/mp4",
-                    only_video=True
-                ).order_by('resolution').desc().first()
+                    only_video=True,
+                    resolution=resolution
+                ).first()
 
-            if stream:
-                download_video(url, stream)
+                if not stream:
+                    stream = yt.streams.filter(
+                        mime_type="video/mp4",
+                        only_video=True
+                    ).order_by('resolution').desc().first()
 
-            # Update progress based on number of videos done
+                if stream:
+                    download_video(url, stream)
+                else:
+                    print(f"Skipped (no stream available): {url}")
+                    skipped.append(url)
+
+            except Exception as e:
+                print(f"Skipped video {i+1}: {e}")
+                skipped.append(url)  # log it but keep going
+
             if progress_callback:
                 progress_callback(int((i + 1) / total * 100))
 
+        # Summary at the end
+        print(f"\nDone! {total - len(skipped)}/{total} videos downloaded.")
+        if skipped:
+            print(f"Skipped {len(skipped)} videos:")
+            for s in skipped:
+                print(f"  - {s}")
+
         return True
+
     except Exception as e:
         print(f"Playlist download error: {e}")
         return False
