@@ -36,6 +36,11 @@ class Ui_Form(object):
 
         self.verticalLayout.addWidget(self.lineEdit)
 
+        self.searchButton = QPushButton(Form)
+        self.searchButton.setObjectName(u"searchButton")
+
+        self.verticalLayout.addWidget(self.searchButton)
+
         self.label_3 = QLabel(Form)
         self.label_3.setObjectName(u"label_3")
 
@@ -51,13 +56,11 @@ class Ui_Form(object):
 
         self.verticalLayout.addWidget(self.label)
 
-        self.frame = QFrame(Form)
-        self.frame.setObjectName(u"frame")
-        self.frame.setMinimumSize(QSize(0, 200))
-        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Shadow.Raised)
+        self.label_image = QLabel(Form)
+        self.label_image.setObjectName(u"label_image")
+        self.label_image.setMinimumSize(QSize(0, 200))
 
-        self.verticalLayout.addWidget(self.frame)
+        self.verticalLayout.addWidget(self.label_image)
 
         self.label_4 = QLabel(Form)
         self.label_4.setObjectName(u"label_4")
@@ -75,7 +78,8 @@ class Ui_Form(object):
 
         self.verticalLayout.addWidget(self.pushButton)
 
-        QWidget.setTabOrder(self.lineEdit, self.pushButton)
+        QWidget.setTabOrder(self.lineEdit, self.searchButton)
+        QWidget.setTabOrder(self.searchButton, self.pushButton)
 
         self.retranslateUi(Form)
 
@@ -85,6 +89,7 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
         self.label_2.setText(QCoreApplication.translate("Form", u"Video URL", None))
+        self.searchButton.setText(QCoreApplication.translate("Form", u"Search", None))
         self.label_3.setText(QCoreApplication.translate("Form", u"Resolution", None))
         self.label.setText(QCoreApplication.translate("Form", u"Preview", None))
         self.label_4.setText(QCoreApplication.translate("Form", u"Download", None))
