@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'Youtube_Downloader.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.7.2
+## Created by: Qt User Interface Compiler version 6.11.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -23,7 +23,7 @@ class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(800, 428)
+        Form.resize(665, 428)
         self.verticalLayout = QVBoxLayout(Form)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.label_2 = QLabel(Form)
@@ -40,10 +40,6 @@ class Ui_Form(object):
         self.label_3.setObjectName(u"label_3")
 
         self.verticalLayout.addWidget(self.label_3)
-        
-        self.searchButton = QPushButton(Form)
-        self.searchButton.setObjectName(u"searchButton")
-        self.verticalLayout.addWidget(self.searchButton)
 
         self.comboBox = QComboBox(Form)
         self.comboBox.setObjectName(u"comboBox")
@@ -55,13 +51,13 @@ class Ui_Form(object):
 
         self.verticalLayout.addWidget(self.label)
 
-        self.label_image = QLabel(Form)
-        self.label_image.setMinimumSize(QSize(0, 200))
-        self.label_image.setFrameShape(QFrame.Shape.StyledPanel)
-        self.label_image.setFrameShadow(QFrame.Shadow.Raised)
-        self.label_image.setAlignment(Qt.AlignCenter) 
+        self.frame = QFrame(Form)
+        self.frame.setObjectName(u"frame")
+        self.frame.setMinimumSize(QSize(0, 200))
+        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Shadow.Raised)
 
-        self.verticalLayout.addWidget(self.label_image)
+        self.verticalLayout.addWidget(self.frame)
 
         self.label_4 = QLabel(Form)
         self.label_4.setObjectName(u"label_4")
@@ -70,8 +66,7 @@ class Ui_Form(object):
 
         self.progressBar = QProgressBar(Form)
         self.progressBar.setObjectName(u"progressBar")
-        self.progressBar.setValue(0)
-        self.progressBar.setMaximum(100)   
+        self.progressBar.setValue(24)
 
         self.verticalLayout.addWidget(self.progressBar)
 
@@ -91,7 +86,6 @@ class Ui_Form(object):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
         self.label_2.setText(QCoreApplication.translate("Form", u"Video URL", None))
         self.label_3.setText(QCoreApplication.translate("Form", u"Resolution", None))
-        self.searchButton.setText(QCoreApplication.translate("Form", u"Search", None))
         self.label.setText(QCoreApplication.translate("Form", u"Preview", None))
         self.label_4.setText(QCoreApplication.translate("Form", u"Download", None))
         self.pushButton.setText(QCoreApplication.translate("Form", u"Download", None))
