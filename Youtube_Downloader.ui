@@ -25,6 +25,13 @@
     <widget class="QLineEdit" name="lineEdit"/>
    </item>
    <item>
+    <widget class="QPushButton" name="searchButton">
+     <property name="text">
+      <string>Search</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="label_3">
      <property name="text">
       <string>Resolution</string>
@@ -42,18 +49,12 @@
     </widget>
    </item>
    <item>
-    <widget class="QFrame" name="frame">
+    <widget class="QLabel" name="label_image">
      <property name="minimumSize">
       <size>
        <width>0</width>
        <height>200</height>
       </size>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Shape::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Shadow::Raised</enum>
      </property>
     </widget>
    </item>
@@ -82,6 +83,7 @@
  </widget>
  <tabstops>
   <tabstop>lineEdit</tabstop>
+  <tabstop>searchButton</tabstop>
   <tabstop>pushButton</tabstop>
  </tabstops>
  <resources/>
