@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>761</width>
+    <height>597</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="YoutubeTab">
+      <attribute name="title">
+       <string>Tab 1</string>
+      </attribute>
+      <widget class="QWidget" name="verticalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>-1</x>
+         <y>-1</y>
+         <width>741</width>
+         <height>551</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="spacing">
+         <number>5</number>
+        </property>
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>5</number>
+        </property>
+        <property name="rightMargin">
+         <number>5</number>
+        </property>
+        <property name="bottomMargin">
+         <number>5</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Video URL</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Resolution</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="searchButton">
+          <property name="text">
+           <string>Search</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox">
+          <item>
+           <property name="text">
+            <string>Choose Item (WEBM have slightly higher quality and smaller size than MP4 but slower compiling)</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>Preview</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_image">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>200</height>
+           </size>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Download</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QProgressBar" name="progressBar">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignJustify|Qt::AlignmentFlag::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>Download</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="PlaylistTab">
+      <attribute name="title">
+       <string>Tab 2</string>
+      </attribute>
+      <widget class="QWidget" name="verticalLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>-1</x>
+         <y>-1</y>
+         <width>741</width>
+         <height>551</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3" stretch="">
+        <property name="sizeConstraint">
+         <enum>QLayout::SizeConstraint::SetMaximumSize</enum>
+        </property>
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>5</number>
+        </property>
+        <property name="rightMargin">
+         <number>5</number>
+        </property>
+        <property name="bottomMargin">
+         <number>5</number>
+        </property>
+       </layout>
+      </widget>
+      <widget class="QLabel" name="PlaylistURLlabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>726</width>
+         <height>42</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Playlist URL</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>525</y>
+         <width>726</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Download</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="PlaylistURL">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>57</y>
+         <width>726</width>
+         <height>26</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>449</y>
+         <width>726</width>
+         <height>42</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Download</string>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="progressBar_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>496</y>
+         <width>726</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignJustify|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_image_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>244</y>
+         <width>726</width>
+         <height>200</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>200</height>
+        </size>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LayoutDirection::LeftToRight</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="searchButton_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>135</y>
+         <width>726</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>88</y>
+         <width>726</width>
+         <height>42</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Resolution</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>197</y>
+         <width>726</width>
+         <height>42</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Preview</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>166</y>
+         <width>726</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Choose Item (WEBM have slightly higher quality and smaller size than MP4 but slower compiling)</string>
+        </property>
+       </item>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

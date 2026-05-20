@@ -6,86 +6,248 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>665</width>
-    <height>428</height>
+    <width>761</width>
+    <height>597</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>YouTube Downloader</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="label_2">
-     <property name="text">
-      <string>Video URL</string>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
      </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLineEdit" name="lineEdit"/>
-   </item>
-   <item>
-    <widget class="QPushButton" name="searchButton">
-     <property name="text">
-      <string>Search</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="label_3">
-     <property name="text">
-      <string>Resolution</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QComboBox" name="comboBox"/>
-   </item>
-   <item>
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Preview</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="label_image">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>200</height>
-      </size>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="label_4">
-     <property name="text">
-      <string>Download</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QProgressBar" name="progressBar">
-     <property name="value">
-      <number>24</number>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QPushButton" name="pushButton">
-     <property name="text">
-      <string>Download</string>
-     </property>
+
+     <!-- ───── YouTube Tab ───── -->
+     <widget class="QWidget" name="YoutubeTab">
+      <attribute name="title">
+       <string>YouTube Downloader</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="leftMargin">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>10</number>
+       </property>
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Video URL</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="placeholderText">
+          <string>https://www.youtube.com/watch?v=...</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QPushButton" name="searchButton">
+         <property name="text">
+          <string>Search</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Resolution</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox">
+         <item>
+          <property name="text">
+           <string>-- Search a video first --</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Preview</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_image">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="text">
+          <string>No preview</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Progress</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar">
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Download</string>
+         </property>
+        </widget>
+       </item>
+
+      </layout>
+     </widget>
+
+     <!-- ───── Playlist Tab ───── -->
+     <widget class="QWidget" name="PlaylistTab">
+      <attribute name="title">
+       <string>Playlist Downloader</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="leftMargin">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>10</number>
+       </property>
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+
+       <item>
+        <widget class="QLabel" name="PlaylistURLlabel">
+         <property name="text">
+          <string>Playlist URL</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="PlaylistURL">
+         <property name="placeholderText">
+          <string>https://www.youtube.com/playlist?list=...</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QPushButton" name="searchButton_2">
+         <property name="text">
+          <string>Search</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Resolution</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox_2">
+         <item>
+          <property name="text">
+           <string>-- Search a playlist first --</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Preview</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_image_2">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="text">
+          <string>No preview</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Progress</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar_2">
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string>Download</string>
+         </property>
+        </widget>
+       </item>
+
+      </layout>
+     </widget>
+
     </widget>
    </item>
   </layout>
  </widget>
- <tabstops>
-  <tabstop>lineEdit</tabstop>
-  <tabstop>searchButton</tabstop>
-  <tabstop>pushButton</tabstop>
- </tabstops>
  <resources/>
  <connections/>
 </ui>
